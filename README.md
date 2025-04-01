@@ -105,7 +105,9 @@ Multiple models were trained and evaluated using cross-validation, including:
 -`notebooks`: All notebooks used in the analisys and prediction of this data.
 - `result_notebook/`
   - `Final_notebook.ipynb`: Final model pipeline, from preprocessing to evaluation.
-- `utils`: Scripts used for visualizations and evaluations, used as a toolbox 
+- `utils`: Scripts used for visualizations and evaluations, used as a toolbox
+- `venv`: environment used during the project.
+- `requirements.txt`: List of packages used during the project
 
 
 
