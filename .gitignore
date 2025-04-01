@@ -1,0 +1,9 @@
+# Ignore contents of specific data subfolders
+src/data/Prep_data/*
+src/data/raw_data/*
+src/data/Train_data/*
+
+# Allow the folders themselves (so they stay in the repo)
+!/data/Prep_data/
+!/data/raw_data/
+!/data/Train_data/
