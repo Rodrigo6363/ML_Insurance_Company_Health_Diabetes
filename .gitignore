@@ -7,3 +7,10 @@ src/data/Train_data/*
 !/data/Prep_data/
 !/data/raw_data/
 !/data/Train_data/
+
+# Ignore virtual environment
+venv/
+ENV/
+env/
+.venv/
+.VENV/
