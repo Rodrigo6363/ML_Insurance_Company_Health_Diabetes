@@ -106,8 +106,117 @@ Multiple models were trained and evaluated using cross-validation, including:
 - `result_notebook/`
   - `Final_notebook.ipynb`: Final model pipeline, from preprocessing to evaluation.
 - `utils`: Scripts used for visualizations and evaluations, used as a toolbox
-- `venv`: environment used during the project.
 - `requirements.txt`: List of packages used during the project
 
 
+# Proyecto de Predicción de Diabetes (2017–2023)
 
+Este proyecto explora y evalúa distintos modelos de aprendizaje automático para predecir la probabilidad de padecer diabetes, utilizando datos de salud recopilados entre **2017 y 2023**. El objetivo es construir una pipeline precisa e interpretable que pueda aplicarse en contextos clínicos reales de cribado.
+
+---
+
+## 📂 Estructura del Proyecto
+
+- **Data**: Datos clínicos y sociodemográficos preprocesados.
+- **Notebook**: Pipeline final con análisis exploratorio, entrenamiento, evaluación y comparación de modelos.
+- **Figures**: Todas las visualizaciones y gráficos utilizados en el análisis y los informes.
+- **Models**: Red neuronal y mejor modelo ML guardados para inferencia.
+- **Utils**: Scripts usados para visualización y evaluación, organizados como una toolbox.
+---
+
+## 🧼 Preprocesamiento de Datos
+
+El conjunto de datos incluye variables numéricas y categóricas como:
+- Edad, peso, altura, niveles de colesterol, HbA1c, presión arterial.
+- Sociodemográficos: género, raza, país de nacimiento, grupo de ingresos.
+- Ingeniería de variables: IMC, ratio de colesterol, índices de riesgo.
+
+Pasos:
+- Tratamiento de valores faltantes.
+- Escalado de características con `StandardScaler`.
+- Categorización de variables (e.g., categorías de IMC, grupos de edad).
+- División train/test.
+
+---
+
+## 📊 Análisis Exploratorio de Datos
+
+### 🎯 Distribución del Target
+
+![Distribución del Target](src/img/target_distribution.png)
+
+### 🔢 Distribución de Variables Numéricas según Diabetes
+
+![Distribución Numérica](src/img/bivariant.png)
+
+### 🧮 Distribución de Variables Categóricas según Target
+
+![Distribución Categórica](src/img/bivariant_cat.png)
+
+### 🔣 Frecuencia de Variables Categóricas (sin procesar)
+
+![Frecuencia Categórica](src/img/cat_dist.png)
+
+### 🔗 Matriz de Correlación
+
+![Matriz de Correlación](src/img/correlation_matrix.png)
+
+---
+
+## 🤖 Entrenamiento y Evaluación de Modelos
+
+### 🧠 Red Neuronal (Keras)
+
+Red neuronal densa con:
+- Capas `Dense` + `BatchNormalization` + `Dropout`.
+- Función de pérdida: Binary Crossentropy.
+- Métricas: Accuracy, AUC, Precision, Recall.
+
+> Se alcanzó un **recall alto (0.89)** pero una **precisión baja (0.40)**.
+
+![Matriz de Confusión NN](src/img/matrix_nn_pred.png)
+
+---
+
+### 📦 Modelos de Aprendizaje Automático
+
+Se entrenaron y evaluaron varios modelos con validación cruzada, incluyendo:
+- Regresión logística, Random Forest, XGBoost, LightGBM, CatBoost, etc.
+
+### 📈 Comparación de Modelos (por Recall medio)
+
+![Comparación de Modelos](src/img/recall.png)
+
+### ✅ Modelo con Mejor Desempeño: Gradient Boosting
+
+- Mejor equilibrio entre precisión, recall y exactitud.
+- Evaluación final:
+
+![Matriz de Confusión ML](src/img/matrix_ml_pred.png)
+
+---
+
+## 📌 Conclusiones
+
+- La **red neuronal** logró **muy alta sensibilidad**, ideal para escenarios de cribado donde es crucial no omitir casos positivos.
+- Los **modelos de ML** (especialmente Gradient Boosting y LightGBM) ofrecieron un rendimiento más equilibrado, con mejor precisión y F1-score.
+- Dependiendo del objetivo clínico (cribado vs diagnóstico), se puede optar por uno u otro modelo.
+
+---
+
+## 📁 Archivos Incluidos
+
+- `data/`
+  - `Prep_data/`: Todos los datos para la predicción, limpios y estructurados por categoría.
+  - `raw_data/`: Datos sin procesar descargados desde la web, por categoría.
+  - `Train_data/`: Datos para entrenamiento, limpios y estructurados.
+  - `data_sample.csv`: Muestra representativa de la estructura de los datos.
+- `img/`: Todas las gráficas y visualizaciones utilizadas.
+- `models/`
+  - `diabetes_nn_model.h5`: Modelo Keras entrenado.
+  - `best_lightgbm_model.pkl`: Mejor modelo de ML entrenado.
+- `notebooks`: Notebooks usados en el análisis y predicción.
+- `result_notebook/`
+  - `Final_notebook.ipynb`: Pipeline final, desde el preprocesamiento hasta la evaluación.
+- `utils`: Scripts de evaluación y visualización usados como toolbox.
+- `requirements.txt`: Lista de paquetes usados en el proyecto.
