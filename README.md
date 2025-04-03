@@ -92,22 +92,35 @@ Multiple models were trained and evaluated using cross-validation, including:
 - Depending on the clinical goal (screening vs diagnosis), either model can be deployed.
 
 ---
-## 📁 Files Included
-- `data/`
-  - `Prep_data/`: All the data to predict, clean and structured by categories.
-  - `raw_data/`: All data scraped directly from the web, divided by categories.
-  - `Train_data/`: All the data to train, clean and structured by categories.
-  - `data_sample.csv`: Sample to show the general structure of the data.
-- `img/`: All graphs and visualizations used.
-- `models/`
-  - `diabetes_nn_model.h5`: Trained Keras model.
-  - `best_lightgbm_model.pkl`: Best trained ML model.
--`notebooks`: All notebooks used in the analisys and prediction of this data.
-- `result_notebook/`
-  - `Final_notebook.ipynb`: Final model pipeline, from preprocessing to evaluation.
-- `utils`: Scripts used for visualizations and evaluations, used as a toolbox
-- `requirements.txt`: List of packages used during the project
+## 📁 Included Files  
+# Project File Description
 
+- `src`
+  - `data/`
+    - `Prep_data/`: All prediction-ready data, cleaned and structured by category.
+    - `raw_data/`: Raw, unprocessed data downloaded from the web, organized by category.
+    - `Train_data/`: Cleaned and structured data used for training.
+    - `data_sample.csv`: Representative sample showing the structure of the dataset.
+  - `img/`: All plots and visualizations used in the project.
+  - `models/`
+    - `diabetes_nn_model.h5`: Trained Keras neural network model.
+    - `best_lightgbm_model.pkl`: Best performing machine learning model.
+  - `notebooks/`: Jupyter notebooks used for analysis and prediction.
+  - `result_notebook/`
+    - `Final_notebook.ipynb`: Final pipeline notebook, from preprocessing to model evaluation.
+  - `utils/`: Evaluation and visualization scripts used as a toolbox.
+  - `requirements.txt`: List of packages and dependencies used in the project.
+
+- `.gitattributes`: Configures how Git handles files (formatting, encoding, etc.).
+- `.gitignore`: Specifies which files or folders should be ignored by Git (e.g., `env/`, temporary files...).
+- `env/`: Python virtual environment with installed dependencies. Not included in the repository.
+- `0-Guia_Proyecto_ML.ipynb`: Main Jupyter notebook guiding the entire machine learning workflow.
+- `Guion_Health_Security_Assistance.pdf`: Script document outlining the structure of the presentation or project defense.
+- `Health_security_assistance.pptx`: PowerPoint presentation with key ideas, results, and visuals from the project.
+- `README.md`: Main documentation file of the repository, including an overview, installation steps, and usage instructions.
+- `Script_Health_Security_Assistance.pdf`: Complete technical or narrative script used for presentation or detailed documentation.
+
+---
 
 # Proyecto de Predicción de Diabetes (2017–2023)
 
@@ -204,19 +217,31 @@ Se entrenaron y evaluaron varios modelos con validación cruzada, incluyendo:
 
 ---
 
-## 📁 Archivos Incluidos
+## 📁 Archivos Incluidos  
+# Descripción de archivos del proyecto
 
-- `data/`
-  - `Prep_data/`: Todos los datos para la predicción, limpios y estructurados por categoría.
-  - `raw_data/`: Datos sin procesar descargados desde la web, por categoría.
-  - `Train_data/`: Datos para entrenamiento, limpios y estructurados.
-  - `data_sample.csv`: Muestra representativa de la estructura de los datos.
-- `img/`: Todas las gráficas y visualizaciones utilizadas.
-- `models/`
-  - `diabetes_nn_model.h5`: Modelo Keras entrenado.
-  - `best_lightgbm_model.pkl`: Mejor modelo de ML entrenado.
-- `notebooks`: Notebooks usados en el análisis y predicción.
-- `result_notebook/`
-  - `Final_notebook.ipynb`: Pipeline final, desde el preprocesamiento hasta la evaluación.
-- `utils`: Scripts de evaluación y visualización usados como toolbox.
-- `requirements.txt`: Lista de paquetes usados en el proyecto.
+- `src`
+  - `data/`
+    - `Prep_data/`: Todos los datos para la predicción, limpios y estructurados por categoría.
+    - `raw_data/`: Datos sin procesar descargados desde la web, por categoría.
+    - `Train_data/`: Datos para entrenamiento, limpios y estructurados.
+    - `data_sample.csv`: Muestra representativa de la estructura de los datos.
+  - `img/`: Todas las gráficas y visualizaciones utilizadas.
+  - `models/`
+    - `diabetes_nn_model.h5`: Modelo Keras entrenado.
+    - `best_lightgbm_model.pkl`: Mejor modelo de ML entrenado.
+  - `notebooks/`: Notebooks usados en el análisis y predicción.
+  - `result_notebook/`
+    - `Final_notebook.ipynb`: Pipeline final, desde el preprocesamiento hasta la evaluación.
+  - `utils/`: Scripts de evaluación y visualización usados como toolbox.
+  - `requirements.txt`: Lista de paquetes usados en el proyecto.
+
+- `.gitattributes`: Configura cómo Git maneja los archivos (formato, codificación, etc.).
+- `.gitignore`: Define qué archivos deben ser ignorados por Git (por ejemplo, `env/`, archivos temporales...).
+- `env/`: Entorno virtual de Python con las dependencias instaladas. No se sube al repositorio.
+- `0-Guia_Proyecto_ML.ipynb`: Notebook base que guía el desarrollo completo del proyecto paso a paso.
+- `Guion_Health_Security_Assistance.pdf`: Documento con el guion estructurado de la presentación o defensa del proyecto.
+- `Health_security_assistance.pptx`: Presentación en PowerPoint con las principales ideas, resultados y visuales del proyecto.
+- `README.md`: Documento principal del repositorio con la descripción general, instalación y uso del proyecto.
+- `Script_Health_Security_Assistance.pdf`: Script completo o narrativo utilizado como soporte técnico o de presentación.
+
